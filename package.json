@@ -1,0 +1,23 @@
+{
+  "name": "express-chat-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:gateway": "nx run api-gateway:dev",
+    "dev:auth": "nx run auth-service:dev",
+    "dev:user": "nx run user-service:dev",
+    "dev:chat": "nx run chat-service:dev",
+    "dev:mail": "nx run mail-service:dev",
+    "dev:ui": "nx run user-ui:dev",
+    "dev:all": "nx run-many --target=dev --parallel=6",
+    "build": "nx run-many --target=build",
+    "lint": "nx run-many --target=lint"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "concurrently": "^8.2.2",
+    "nx": "19.8.4",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.0"
+  }
+}
